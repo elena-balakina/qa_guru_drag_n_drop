@@ -21,7 +21,7 @@ public class GithubTests {
     public void softAssertionsTest() {
         open("https://github.com/selenide/selenide");
         $("[data-content='Wiki']").click();
-        $(".markdown-body").$(byText("Soft assertions")).should(exist).should(visible).click();
+        $(byText("Soft assertions")).click();
         $("ol[start='3']").shouldHave(text("JUnit5"));
         $("ol[start='3'] + .highlight-source-java").should(visible);
     }
